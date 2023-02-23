@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
 
     <ImageView
@@ -27,4 +27,75 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textBluetoothMac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PB1-121212"
+        android:textSize="12sp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textBluetoothName"/>
+
+    <TextView
+        android:id="@+id/textBluetoothBoundStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PB1-121212"
+        android:textSize="12sp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textBluetoothMac"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:text="Connect"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textBluetoothMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PB1-121212"
+        android:textColor="@color/black"
+        android:layout_marginEnd="15dp"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/ic_baseline_compare_arrows_24"
+        android:drawablePadding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/textBluetoothDBM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_signal_cellular_4_bar_24"
+        android:drawablePadding="5dp"
+        android:text="PB1-121212"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/textBluetoothMS"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBluetoothDBM"
+        android:background="@color/black"
+        android:layout_marginTop="15dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
